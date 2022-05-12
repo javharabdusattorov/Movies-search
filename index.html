@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search MOVIES</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="form__container container mt-4">
+
+        <div class="row text-center">
+            <form class="col-12">
+                <h2>Movies App</h2>
+                <input class="form__search form-control mt-4" type="search" placeholder="Movie name">
+            </form>
+
+            <div class="all__results d-flex mt-4">
+                <div class="col-lg-7 movies-container">
+                    <h4>Seach results</h4>
+                    <p></p>
+                    <div class="movies"></div>
+                    <div class="pagination d-flex mt-3">
+                    </div>
+                </div>
+
+                <div class="col-lg-5 details-container">
+                    <h4>Movie info</h4>
+                    <div class="details"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="loader__container">
+        <div class="loader">
+            <img src="img/snoop dog.gif" alt="">
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
