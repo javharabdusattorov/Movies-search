@@ -14,6 +14,8 @@ let pagination = {
     currentPage: 1,     // Hozir qaysi page'da turibman - $("button.page") bosilganda | pagination.currentPage = $("button.page").attr("data-id") + searchFetch
 };
 
+const API_URL = 'https://www.omdbapi.com'
+
 const elMoviesContainer = $('.movies-container');
 const elDetailsContainer = $('.details-container');
 const elMovies = $('.movies');
@@ -34,7 +36,7 @@ function searchFetch() {
     startLoader()
 
     // HTTP + DOMAIN + ROUTE + QUERY
-    fetch(`http://www.omdbapi.com/?apikey=249e8962&s=${search}&page=${pagination.currentPage}`)
+    fetch(`${API_URL}/?apikey=249e8962&s=${search}&page=${pagination.currentPage}`)
         .then(res => res.json())
         .then(res => {
 
@@ -59,7 +61,7 @@ function infoFetch(evt) {
 
     const element = $(evt.target);
     const index = element.parent().attr('data-id');
-    fetch(`http://www.omdbapi.com/?apikey=249e8962&i=${allMovies[index].imdbID}`)
+    fetch(`${API_URL}/?apikey=249e8962&i=${allMovies[index].imdbID}`)
         .then(res => res.json())
         .then(data => {
             endLoader()
@@ -109,7 +111,6 @@ function renderMovieDetail() {
             <p>Year:  ${movieDetail.Year}</p>
         </div>
     `)
-    console.log(movieDetail.Poster.length);
 
     elDetails.append(html);
 }
@@ -133,22 +134,10 @@ function renderPagination() {
     }
 }
 
-
-
-
-
+// function of LOADER
 function startLoader() {
     $('.loader__container').css('display', 'block');
 }
 function endLoader() {
     $('.loader__container').css('display', 'none');
 }
-// function loader() {
-//     document.querySelector('.loader__container').classList.add('fade-out');
-// }
-
-// function fadeOut() {
-//     setInterval(loader, 3000);
-// }
-
-// window.onload = fadeOut();
