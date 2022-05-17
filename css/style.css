@@ -19,9 +19,20 @@ p, h4, h5 {
 h2 {
     width: 100%;
     display: flex;
-    justify-content: center;    
-    color: firebrick;
+    justify-content: center;   
+    color: firebrick; 
     margin-left: 25px;
+}
+
+span {
+    color: crimson;
+    cursor: pointer;
+}
+
+.auto-type {
+    padding: 0 5px;
+    border-radius: 3px;
+    border-bottom: 5px solid #f1e903;
 }
 
 button {
