@@ -6,11 +6,51 @@
     text-decoration: none !important;
     font-family: 'Bahnschrift';
     font-weight: 900;
+}
+
+body {
     background-color: #EAEAEA;
 }
 
+p, h4, h5 {
+    margin-bottom: 0;
+}
+
 h2 {
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    color: firebrick;
+    margin-left: 25px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+button i {
+    font-size: 27px;
+    color: rgb(129, 84, 253);
+}
+
+.like i {
+    font-size: 28px;
+    color: crimson;
+}
+
+.like {
+    position: relative;
+}
+
+.like p {
+    position: absolute;
+    top: 22px;
+    left: 2px;
+    color: white;
+    /* text-shadow: 3px 7px 4px black; */
 }
 
 .form__search {
@@ -50,6 +90,10 @@ h2 {
     opacity: 0.7;
 }
 
+.movies {
+    margin-top: 55px;
+}
+
 .col-lg-7 p {
     font-size: 18px;
     color: crimson;
@@ -59,8 +103,27 @@ h2 {
     margin-top: 55px;
 }
 
+.info-box .poster {
+    width: 341px;
+    height: 450px;
+}
+
+.movie__detail-bottom {
+    padding: 15px 8px;
+    background-color: gainsboro;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: -7px;
+}
+
+.info-box .clickLike {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
 .info-box h4 {
-    font-size: 24px;
+    font-size: 22px;
     color: #039752;
 }
 
@@ -69,6 +132,13 @@ h2 {
     color: rgb(97 83 215 / 92%);
 }
 
+.pagination {
+    width: 100%;
+    overflow: auto;
+}
+
+
+/* LOADER */
 .loader__container {
     display: none;
 }
@@ -78,7 +148,7 @@ h2 {
     position: fixed;
     top: 0; left: 0;
     z-index: 10000;
-    background: #eaeaea;
+    background: #fafafa;
     justify-content: center;
     align-content: center;
     width: 100%;
@@ -87,4 +157,84 @@ h2 {
 
 .loader__container.fade-out {
     top: -120%;
+}
+
+.reflash {
+    position: relative;
+}
+
+.reflash p {
+    position: absolute;
+    top: 22px;
+    left: 2px;
+    color: white;
+}
+
+.liked-container h2 {
+    font-size: 35px;
+    color: #f62727;
+    font-family: monospace;
+}
+
+.liked-box {
+    width: 320px;
+    min-height: 500px;
+    border-bottom: 3px solid crimson;
+    border-radius: 4px;    
+}
+
+.liked-box img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.liked-box .liked__box-detail {
+    padding: 15px 8px;
+    margin-top: -7px;
+}
+
+.liked__box-detail h4 {
+    font-size: 22px; 
+    color: #f62727;
+}
+
+.liked__box-detail p {
+    font-size: 20px;
+    color: goldenrod;
+} 
+
+.liked_navbar {
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.938);
+    padding: 13px 0;
+}
+
+.come_back {
+    padding: 5px 25px;
+    border-radius: 2px;
+}
+
+.come_back i {
+    font-size: 30px;
+}
+
+.remove_save-movie {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.fas.fa-backspace {
+    color: rgb(172, 81, 16);
+}
+.fas.fa-heart {
+    color: crimson;
+}
+.far.fa-heart {
+    color: white;
+}
+.fas.fa-redo-alt {
+    color: rgb(14, 127, 240);
 }

@@ -6,46 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search MOVIES</title>
+    <link rel="stylesheet" href="all.min/all.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="form__container container mt-4">
-
+    <div class="search-container container mt-4">
         <div class="row text-center">
-            <form class="col-12">
-                <h2>Movies App</h2>
-                <input class="form__search form-control mt-4" type="search" placeholder="Movie name">
-            </form>
+            <div class="col-12">
+                <div class="header-things d-flex justify-content-between">
+                    <h2>Movies App</h2>
+                    <div class="library d-flex me-2">
+                        <button type="button" class="reflash me-3">
+                            <i class="fas fa-redo-alt"></i>
+                            <p>R</p>
+                        </button>
+                        <button type="button" class="like">
+                            <i class="fas fa-heart-square"></i>
+                            <p></p>
+                        </button>
+                    </div>
+                </div>
+                <form class="search-form">
+                    <input class="form__search form-control mt-4" type="search" placeholder="Movie name">
+                </form>
+            </div>
 
-            <div class="all__results d-flex mt-4">
+            <div class="all__results d-flex justify-content-between mt-4">
                 <div class="col-lg-7 movies-container">
                     <h4>Seach results</h4>
                     <p></p>
+                <div class="result-movies">
                     <div class="movies"></div>
-                    <div class="pagination d-flex mt-3">
-                    </div>
+                    <div class="pagination d-flex mt-3"></div>
+                </div>
                 </div>
 
-                <div class="col-lg-5 details-container">
+                <div class="col-lg-4 details-container">
                     <h4>Movie info</h4>
                     <div class="details"></div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="liked-container">
+            <div class="container-fluid sticky-top">
+                <div class="liked_navbar d-flex justify-content-between">
+                    <button class="come_back"><i class="fas fa-angle-double-left"></i></button>
+                    <h2>Welcome to your favourite movies!</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="likee-movies row justify-content-between mt-4"> </div>
+            </div>
     </div>
 
     <div class="loader__container">
         <div class="loader">
-            <img src="img/snoop dog.gif" alt="">
+            <img src="img/Circles-menu-3.gif" alt="">
         </div>
     </div>
 
+
+
     <script src="js/jquery.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/submit.js"></script>
+    <script src="js/movies.js"></script>
+    <script src="js/movie-detail.js"></script>
+    <script src="js/saved-movies.js"></script>
+    <script src="js/loader.js"></script>
 </body>
 
 </html>

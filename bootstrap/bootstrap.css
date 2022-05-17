@@ -621,7 +621,6 @@ progress {
 }
 
 .container,
-.container-fluid,
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -2202,7 +2201,7 @@ progress {
 }
 .form-control[type=file] {
   overflow: hidden;
-}
+} 
 .form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
